@@ -1,3 +1,3 @@
-tourism; tramp2; 23; 4; 
+tourism; tramp2; 23; 2; 
+clothes; nike; 144; 1; 
 fitnessEquipment; D8012; 10; 6; 
-clothes; nike; 144; 2; 

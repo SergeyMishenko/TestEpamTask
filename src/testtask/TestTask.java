@@ -166,7 +166,7 @@ public class TestTask {
             fis = new FileInputStream(fileName); in = new ObjectInputStream(fis);
             users = (ArrayList < User > ) in .readObject(); in .close();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }

@@ -49,7 +49,7 @@ public class Shop {
         for (Map.Entry entry: goods.entrySet()) {
             int key = (int) entry.getValue();
             SportEquipment value = (SportEquipment) entry.getKey();
-            System.out.println("category-" + value.getCategory() + "; title-" + value.getTitle() + "; price-" + value.getPrise() + "; quantity-   " + key + ";");
+            System.out.println("category-" + value.getCategory() + "; title-" + value.getTitle() + "; price-" + value.getPrise() + "; quantity-" + key + ";");
         }
     }
 

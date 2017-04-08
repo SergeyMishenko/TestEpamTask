@@ -6,6 +6,7 @@
 package testtask;
 
 import java.io.Serializable;
+import static java.lang.Math.abs;
 
 
 /**
@@ -22,6 +23,35 @@ public class SportEquipment implements Serializable {
     private Category category;
     private String title;
     private int price;
+
+    @Override
+    public int hashCode() {
+        final int prime = 37;
+        int result = 1;
+        result = prime * result + price;
+        result = prime * result + category.ordinal();
+        result = prime * result + title.hashCode();
+        result = abs(result);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        SportEquipment other = (SportEquipment) obj;
+        if (category != other.category)
+            return false;
+        if (title != other.title)
+            return false;
+        if (price != other.price)
+            return false;
+        return true;
+    }
 
     public SportEquipment(Category category, String title, int price) {
         this.category = category;
